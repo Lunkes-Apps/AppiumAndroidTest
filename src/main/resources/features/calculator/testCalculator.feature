@@ -23,10 +23,10 @@ Feature: Title of your feature
   @functional
   Scenario: Test plus numbers
     Given I launch the calculator
-    When I press "4"
-    And I press "+"
-    And I press "5"
-    And I press "="
+    When I press number "4"
+    And I press key plus
+    And I press number "5"
+    And I press key equal
     Then The calculator will display "9" 
 
   

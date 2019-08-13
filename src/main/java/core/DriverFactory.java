@@ -20,6 +20,10 @@ public class DriverFactory {
 		return driver;
 	}
 	
+	public static AndroidDriver<MobileElement> getDriver(){
+		return driver;
+	}
+	
 	
 	private static void createDriver(String appPackage, String appActivity) {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
