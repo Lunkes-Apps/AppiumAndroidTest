@@ -36,4 +36,6 @@ public class StepsCalculatorTest {
 	public void tearDown() {		
 	
 	}
+	
+	
 }
