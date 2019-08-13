@@ -28,5 +28,14 @@ Feature: Title of your feature
     And I press number "5"
     And I press key equal
     Then The calculator will display "9" 
+    
+  @functional
+  Scenario: Test plus numbers2
+    Given I launch the calculator
+    When I press number "5"
+    And I press key plus
+    And I press number "5"
+    And I press key equal
+    Then The calculator will display "10" 
 
   
