@@ -39,6 +39,11 @@ public class StepsCalculatorTest extends BaseTest{
 		calculator.pressEQ();	    
 	}
 
+	@When("^I press key minus$")
+	public void i_press_key_minus() throws Throwable {
+	    calculator.pressMinus();
+	    
+	}
 
 	@Then("^The calculator will display \"([^\"]*)\"$")
 	public void the_calculator_will_display(String result) throws Throwable {

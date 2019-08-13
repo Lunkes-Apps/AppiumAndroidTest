@@ -38,6 +38,7 @@ public class MainPage extends BasePage{
 	private static final String DISPLAY_ID = "com.google.android.calculator:id/result_final";	
 	private static final String KEY_EQUAL_ID = "com.google.android.calculator:id/eq";
 	private static final String KEY_PLUS_ID = "com.google.android.calculator:id/op_add";
+	private static final String KEY_MINUS_ID = "com.google.android.calculator:id/op_sub";
 	
 	
 	public void pressNumber(String number) {
@@ -58,6 +59,10 @@ public class MainPage extends BasePage{
 	
 	public void pressPlus() {
 		click(By.id(KEY_PLUS_ID));
+	}
+	
+	public void pressMinus() {
+		click(By.id(KEY_MINUS_ID));
 	}
 	
 	void clickInTheNumber(String number)throws InvalidEntryException{
