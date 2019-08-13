@@ -3,6 +3,7 @@ package page.calculator;
 import org.openqa.selenium.By;
 
 import core.BasePage;
+import utils.InvalidEntryException;
 
 public class MainPage extends BasePage{
 	
@@ -40,7 +41,11 @@ public class MainPage extends BasePage{
 	
 	
 	public void pressNumber(String number) {
-		click(By.id(numberKeys[Integer.parseInt(number)]));
+		try {
+			clickInTheNumber(number);
+		} catch (InvalidEntryException e) {
+			e.printStackTrace();
+		}	
 	}
 	
 	public void pressEQ() {
@@ -53,6 +58,18 @@ public class MainPage extends BasePage{
 	
 	public void pressPlus() {
 		click(By.id(KEY_PLUS_ID));
+	}
+	
+	void clickInTheNumber(String number)throws InvalidEntryException{
+		String numberPattern = "[0-9]+";
+		if (number.matches(numberPattern)) {
+			char[] numbers = number.toCharArray();
+			for (char c : numbers) {
+				click(By.id(numberKeys[Integer.parseInt(Character.toString(c))]));
+			}			
+		}else {
+			throw new InvalidEntryException("The entry value is not a number");
+		}
 	}
 	
 }
