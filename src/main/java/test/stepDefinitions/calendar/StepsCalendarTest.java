@@ -12,8 +12,7 @@ public class StepsCalendarTest extends BaseTest{
 	
 	@Given("^I launch the calendar$")
 	public void i_launch_the_calendar() throws Throwable {
-	   calendar = new MainPage();
-	   
+	   calendar = new MainPage();	   
 	}
 
 	@When("^I press in today number$")

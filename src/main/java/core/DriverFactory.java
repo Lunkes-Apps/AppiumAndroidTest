@@ -32,6 +32,8 @@ public class DriverFactory {
 		desiredCapabilities.setCapability("automationName", "uiautomator2");
 		desiredCapabilities.setCapability("appPackage", appPackage);
 		desiredCapabilities.setCapability("appActivity", appActivity);
+		desiredCapabilities.setCapability("noReset", "true");
+		desiredCapabilities.setCapability("fullReset", "false");
 		URL remoteUrl;
 		try {
 			remoteUrl = new URL("http://localhost:4723/wd/hub");
