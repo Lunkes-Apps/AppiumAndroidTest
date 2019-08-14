@@ -9,7 +9,7 @@ Feature: Test of calendar
   Scenario: Test add event
     Given I launch the calendar
     When I press in today number
-    And I press in event empty area
+    And I press button add event
     And I press in new event
     And I fill out the title of event
     And I press done    

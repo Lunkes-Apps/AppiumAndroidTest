@@ -13,7 +13,7 @@ public class MainPage extends BasePage{
 	
 	private static final String NEXT_ID = "com.google.android.calendar:id/right_arrow";
 	private static final String GOTIT_ID = "com.google.android.calendar:id/done_button";
-	
+	private static final String ACTION_BUTTON_ID = "com.google.android.calendar:id/floating_action_button";
 	
 	public void clickOnToDay() {
 		DateHelper dh = new DateHelper();
@@ -28,6 +28,10 @@ public class MainPage extends BasePage{
 	
 	public void clickOnGotIt() {
 		click(By.id(GOTIT_ID));
+	}
+	
+	public void clickActionButton() {
+		click(By.id(ACTION_BUTTON_ID));
 	}
 
 }

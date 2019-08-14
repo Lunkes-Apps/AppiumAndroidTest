@@ -1,7 +1,11 @@
 package test.stepDefinitions.calendar;
 
 
+import static core.DriverFactory.getDriver;
+import static core.DriverFactory.killDriver;
+
 import core.BaseTest;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -18,6 +22,12 @@ public class StepsCalendarTest extends BaseTest{
 	@When("^I press in today number$")
 	public void i_press_in_today_number() throws Throwable {
 	  calendar.clickOnToDay();	   
+	}
+	
+	@When("^I press button add event$")
+	public void i_button_add_event() throws Throwable {
+	    
+	    
 	}
 
 	@When("^I press in event empty area$")
@@ -60,6 +70,14 @@ public class StepsCalendarTest extends BaseTest{
 	public void the_title_shoudl_be_displayed_in_main_page() throws Throwable {
 	   
 	   
+	}
+	
+	@After
+	public void tearDown() {
+		System.out.print("After\n");
+//		screenShot();
+		getDriver().resetApp();
+		killDriver();
 	}
 
 
