@@ -12,13 +12,14 @@ public class BaseTest {
 	
 	@AfterClass
 	public static void finish() {
-		killDriver();
+		
 	}
 
 	@After
 	public void tearDown() {
 //		screenShot();
-		getDriver().resetApp();
+//		getDriver().resetApp();
+		killDriver();
 	}
 
 }
